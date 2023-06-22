@@ -1,0 +1,23 @@
+Git is a distributed version control system used in software development to track changes to source code. 
+It allows multiple developers to collaborate on a project by maintaining a history of modifications and managing different versions of the codebase.
+Git records changes at a granular level, supports branching and merging for parallel development, and enables synchronization and collaboration among team members through remote repositories. 
+It provides a flexible and efficient way to manage and version control source code, facilitating collaboration and tracking changes throughout the software development process.
+
+
+ Basic Git commands and their functions:
+
+git init: Initializes a new Git repository in the current directory.
+git clone: Creates a copy of a remote repository on your local machine.
+git add: Adds a file or directory to the staging area, preparing it for commit.
+git commit -m: Records the changes made to the files in the repository, along with a descriptive message.
+git status: Shows the current status of the repository, including the changes and files that are staged or not staged.
+git log: Displays the commit history, showing the author, date, and commit message of each commit.
+git push: Uploads local changes to a remote repository.
+git pull: Downloads and incorporates changes from a remote repository into your local repository.
+git branch: Lists all existing branches and shows the current branch.
+git checkout: Switches to the specified branch.
+git merge: Combines changes from the specified branch into the current branch.
+git stash: Temporarily saves changes that are not ready to be committed, allowing you to switch branches or work on something else.
+git remote: Displays the remote repositories associated with the current repository.
+git fetch: Downloads new changes from a remote repository but does not merge them into the current branch.
+git reset: Resets the repository to a previous commit, discarding subsequent changes.
