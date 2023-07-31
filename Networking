@@ -1,0 +1,101 @@
+                     Hub, Switch and Router.
+Hub, switch, and router are networking devices that play crucial roles in connecting and managing data traffic within a computer network. Each device serves a distinct purpose in handling network communication.
+Hub: A hub is a simple network device that operates at the physical layer (Layer 1) of the OSI (Open Systems Interconnection) model. It is essentially a multi-port repeater that connects multiple devices in a local area network (LAN). When a data packet arrives at a hub, it is broadcasted to all connected devices, regardless of the intended recipient. This means that all devices connected to the hub will receive the data, even if it is not meant for them. Hubs have become largely obsolete in modern networks due to their inefficient use of bandwidth and their inability to filter or manage traffic.
+Switch: A switch is a more sophisticated network device that operates at the data link layer (Layer 2) of the OSI model. It is designed to optimize network performance by efficiently directing data packets to their intended destination. Switches create a MAC address table that maps the MAC addresses of devices connected to the switch's ports. When a data packet arrives at a switch, it examines the destination MAC address and uses the MAC address table to forward the packet only to the port associated with the destination device. This process is called "packet switching" and significantly reduces unnecessary network traffic, making the network faster and more efficient.
+Router: A router operates at the network layer (Layer 3) of the OSI model and is responsible for connecting different networks together. Routers are more intelligent than hubs and switches because they can make decisions about where to send data packets based on the destination IP address. They maintain a routing table that contains information about different networks and the best paths to reach them. Routers can determine the most appropriate path for a packet to reach its destination, which may involve passing through multiple intermediate routers. This way, routers enable communication between devices on different networks. They also provide network security by acting as a boundary between different network segments, filtering incoming and outgoing traffic based on predefined rules.
+                                                                The OSI model
+The OSI model (Open Systems Interconnection model) is a conceptual framework that standardizes the functions of a telecommunication or computing system into seven distinct layers. It was developed by the International Organization for Standardization (ISO) to facilitate the interoperability and communication between different systems and devices across a network. The seven layers of the OSI model, from the top layer to the bottom layer, are as follows:
+Application Layer (Layer 7):
+The Application layer is the topmost layer and is responsible for providing network services directly to user applications. It enables communication between user software and the network. Protocols like HTTP, SMTP, FTP, and DNS operate at this layer.
+Presentation Layer (Layer 6):
+The Presentation layer is responsible for data representation, translation, and encryption. It ensures that data exchanged between applications can be understood by the receiving system. This layer deals with data compression, encryption, and character set conversions.
+Session Layer (Layer 5):
+The Session layer establishes, maintains, and terminates communication sessions between applications. It manages the establishment and synchronization of connections, allowing for data exchange between devices.
+Transport Layer (Layer 4):
+The Transport layer is responsible for end-to-end communication and data flow control. It ensures reliable and error-free data delivery by segmenting data from the session layer into smaller packets and managing their transmission, acknowledgment, and retransmission if needed. TCP (Transmission Control Protocol) and UDP (User Datagram Protocol) operate at this layer.
+Network Layer (Layer 3):
+The Network layer handles routing and forwarding of data packets between different networks. It is responsible for logical addressing, such as IP addresses, and determines the best path for data packets to reach their destination. Routers operate at this layer.
+Data Link Layer (Layer 2):
+The Data Link layer is responsible for the reliable transfer of data between two directly connected devices on the same network segment. It is divided into two sub-layers: Logical Link Control (LLC) and Media Access Control (MAC). Switches and bridges operate at this layer.
+Physical Layer (Layer 1):
+The Physical layer deals with the physical transmission of data over the network medium, such as copper wires, optical fibers, or wireless signals. It defines the hardware specifications and protocols required for transmitting raw bits. This layer is concerned with the physical connection between devices and how they send and receive data signals.
+                                                                   Network Protocols
+Network protocols refer to a set of rules, conventions, and standards that govern communication and data exchange between devices in a computer network. These protocols define the format, timing, sequencing, and error control necessary for devices to understand and interpret data transmitted over the network. They ensure that data can be successfully transmitted, received, and interpreted by different devices regardless of their hardware or software differences.  Some key aspects of network protocols include Data Formatting, Addressing, Routing and Forwarding, Error Detection and Correction, Flow Control, Session Management, Security and Protocol Stacks.
+Well-known examples of network protocols include TCP, UDP, IP, HTTP, FTP, SMTP, and DNS, each serving specific purposes in the network communication process.
+HTTP (Hypertext Transfer Protocol): HTTP is the foundation of data communication on the World Wide Web. It is an application layer protocol used for retrieving and displaying web pages. When a URL is entered in a web browser, it sends an HTTP request to the web server, which then responds with the requested web page. HTTP operates on top of TCP and uses port 80 for communication.
+HTTPS (Hypertext Transfer Protocol Secure): HTTPS is the secure version of HTTP. It provides encryption and authentication using SSL/TLS protocols to secure data transmission between the web browser and the web server. HTTPS is commonly used for secure online transactions, login pages, and any other scenario that requires data privacy. It uses port 443 for communication.
+TCP/IP (Transmission Control Protocol/Internet Protocol): TCP/IP is a suite of protocols that form the backbone of the internet and most modern computer networks. It includes TCP (Transmission Control Protocol) for reliable data delivery and flow control, and IP (Internet Protocol) for addressing and routing data packets across networks. TCP/IP operates at both the transport and network layers of the OSI model, ensuring data is delivered accurately and efficiently.
+SMTP (Simple Mail Transfer Protocol): SMTP is an application layer protocol used for sending and receiving email messages between mail servers. It defines the rules for mail exchange and relaying messages across networks. When you send an email, your email client uses SMTP to send the message to your email server, which then routes it to the recipient's server. SMTP operates on port 25.
+UDP (User Datagram Protocol): UDP is a connectionless transport layer protocol that provides faster but unreliable data transmission. Unlike TCP, UDP does not establish a connection before sending data and does not guarantee data delivery or error checking. It is commonly used for applications where speed is crucial and some data loss is acceptable, such as real-time audio and video streaming. UDP operates on ports for various applications.
+DNS (Domain Name System): DNS is a critical application layer protocol that translates human-readable domain names (e.g., www.google.com) into their corresponding IP addresses. It allows users to access websites using easy-to-remember domain names while computers communicate using IP addresses. DNS operates on both UDP (port 53) and TCP.
+DHCP (Dynamic Host Configuration Protocol): DHCP is an application layer protocol used to automatically assign IP addresses and network configuration to devices on a network. DHCP allows devices to join the network without manual IP configuration, making network management easier.
+FTP (File Transfer Protocol): FTP is an application layer protocol used for transferring files between a client and a server on a network. It enables users to upload and download files to and from servers with specific access permissions. FTP operates on port 21 for control and port 20 for data transfer (in active mode).
+                                                                   Firewall
+A firewall is a network security device that acts as a barrier between a trusted internal network and an untrusted external network, such as the internet. Its primary function is to monitor and control incoming and outgoing network traffic based on a set of predefined security rules. By doing so, it helps protect the internal network from unauthorized access, malicious activities, and potential security threats. Firewalls operate by examining data packets as they pass through the network. When a data packet attempts to enter or leave the network, the firewall inspects the packet's source, destination, and other attributes, and compares them against its rule set. Depending on the rules, the firewall can then either allow, block, or redirect the packet.
+
+                                                                                 DNS
+DNS stands for "Domain Name System," and it is a fundamental protocol used on the internet and private networks to translate human-readable domain names into numerical IP addresses. Computers and other network devices communicate using IP addresses, which are numerical values (e.g., 192.168.0.1) that uniquely identify each device on a network. However, remembering IP addresses for all the websites we want to visit can be challenging and inconvenient. That's where DNS comes into play. It serves as a massive distributed directory that allows us to use easily recognizable domain names (e.g., www.google.com) instead of IP addresses.
+ How DNS works:
+Domain Name Resolution: When you enter a domain name into your web browser, your computer first checks its local DNS cache. If the domain name is found there (from previous DNS queries), the corresponding IP address is retrieved, and the browser connects to the associated server.
+Recursive DNS Query: If the domain name is not found in the local cache, your computer sends a DNS query to a recursive DNS resolver, typically provided by your Internet Service Provider (ISP). The recursive resolver is responsible for finding the IP address associated with the domain name.
+Iterative DNS Query: If the recursive resolver doesn't have the IP address in its cache, it starts an iterative process to find the answer. It sends requests to various DNS root servers, which then point to the appropriate top-level domain (TLD) servers (e.g., .com, .org, .net).
+Authoritative DNS Server: The TLD servers respond with the location of the authoritative DNS server for the specific domain. The authoritative server is responsible for maintaining the DNS records (e.g., A records for IPv4 addresses, AAAA records for IPv6 addresses, MX records for mail servers) for that domain.
+IP Address Retrieval: The recursive resolver queries the authoritative DNS server, and the server responds with the corresponding IP address for the requested domain name. The recursive resolver caches this information for future use, and the IP address is sent back to your computer.
+Establishing Connection: Now armed with the IP address, your computer can connect to the server associated with the domain name, allowing you to access the website or service you requested.
+                                                                        Latency 
+Latency refers to the time delay or the amount of time it takes for data to travel from its source to its destination in a computer network or a digital system. It is a critical factor that affects the responsiveness and performance of various networked applications and services.
+                                                                        Caching 
+Caching is a technique used to temporarily store copies of frequently accessed data or resources in a faster and more accessible location, known as a cache. The primary purpose of caching is to improve the performance and efficiency of data retrieval and reduce the need to fetch the same data repeatedly from its original, slower source.
+                                                                Wide Area Network
+A Wide Area Network (WAN) is a type of computer network that spans a large geographical area and connects multiple local area networks (LANs) or other smaller networks together. WANs are designed to facilitate data communication and exchange between devices located in different cities, states, countries, or even continents. Unlike LANs, which typically cover a limited area such as a home, office building, or campus, WANs provide long-distance connectivity and are often established over public or private telecommunications networks. These networks can include various transmission technologies, such as leased lines, fiber-optic cables, satellite links, microwave links, and internet connections.
+                                                               IP address
+An IP address, short for Internet Protocol address, is a numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication. It serves as a unique identifier for a specific device, allowing it to be located and communicate with other devices on the network. IP addresses are a fundamental part of the internet and other computer networks, enabling data packets to be directed to their intended destinations. They play a crucial role in establishing connections between devices, allowing data to be transmitted across networks in a systematic and efficient manner. 
+IP addresses come in two main versions:
+1. IPv4 (Internet Protocol version 4): IPv4 addresses are 32-bit binary numbers, typically represented in a human-readable dotted-decimal format, such as "192.168.1.1". Each segment of the IP address contains a value from 0 to 255, resulting in a total of approximately 4.3 billion unique IPv4 addresses. Due to the rapid growth of the internet and increasing number of devices, the availability of IPv4 addresses has become limited.
+2. IPv6 (Internet Protocol version 6): IPv6 addresses are 128-bit binary numbers, expressed in a hexadecimal format, such as "2001:0db8:85a3:0000:0000:8a2e:0370:7334". IPv6 provides an enormous address space, with approximately 340 undecillion unique addresses, ensuring that the world will not run out of IP addresses anytime soon. IPv6 adoption has been growing to accommodate the increasing number of devices and support new technologies.
+IP addresses are used for various purposes, such as routing data across the internet, identifying the source and destination of network traffic, and enabling devices to communicate with each other through protocols like TCP/IP and UDP.
+When you access a website, send an email, or perform any internet-related activity, your device uses its IP address to communicate with the intended destination's IP address, allowing the data to be transmitted back and forth between devices across the network.
+                                                                      Routing Information Protocol.
+The Routing Information Protocol (RIP) is one of the oldest interior gateway protocols (IGPs) used for dynamic routing in computer networks. RIP is designed to help routers exchange routing information within a small to medium-sized network, making it suitable for small office and home networks. RIP operates based on the distance-vector algorithm, where routers exchange routing information with their neighboring routers, and each router calculates the best path to reach a particular network. The "distance" in this context refers to the number of hops (intermediate routers) between the source and the destination network.
+"193.16.20.35/29" What is the Network IP, number of hosts, range of IP addresses and broadcast Ip from this subnet?
+To determine the network IP, number of hosts, range of IP addresses, and broadcast IP from the given subnet "193.16.20.35/29," we need to analyze the subnet mask.
+The "/29" in CIDR notation indicates that the subnet mask has 29 bits set to "1" from the leftmost side. Let's calculate the values:
+Network IP:
+The network IP is the first IP address in the subnet range. To find it, we need to convert the subnet mask to its binary representation:
+Subnet mask: 255.255.255.248 (in binary: 11111111.11111111.11111111.11111000)
+To find the network IP, we perform a bitwise "AND" operation between the subnet mask and the given IP address:
+less
+Copy code
+193.16.20.35     (in binary: 11000001.00010000.00010100.00100011)
+& 255.255.255.248 (in binary: 11111111.11111111.11111111.11111000)
+java
+Copy code
+Network IP      (in binary: 11000001.00010000.00010100.00100000)
+Network IP: 193.16.20.32
+Number of Hosts:
+The number of hosts is the total number of usable IP addresses within the subnet, excluding the network and broadcast IPs. In this case, we have a /29 subnet, which means we have 32 - 29 = 3 bits available for host addresses.
+As there are 3 bits for host addresses, the number of possible host addresses is 2^3 - 2 (subtracting 2 to account for the network and broadcast IPs):
+Number of hosts: 2^3 - 2 = 8 - 2 = 6 hosts
+Range of IP Addresses:
+The range of IP addresses includes all usable IP addresses within the subnet, excluding the network and broadcast IPs. The range starts with the first host IP (one greater than the network IP) and ends with the last host IP (one less than the broadcast IP).
+Range of IP addresses: 193.16.20.33 to 193.16.20.38
+Broadcast IP:
+The broadcast IP is the last IP address in the subnet range. It is used to send data to all devices within the subnet.
+To find the broadcast IP, we convert the inverted subnet mask to its binary representation:
+Inverted subnet mask: 0.0.0.7 (in binary: 00000000.00000000.00000000.00000111)
+Then, we perform a bitwise "OR" operation between the inverted subnet mask and the network IP:
+java
+Copy code
+Network IP      (in binary: 11000001.00010000.00010100.00100000)
+| Inverted Mask (in binary: 00000000.00000000.00000000.00000111)
+java
+Copy code
+Broadcast IP    (in binary: 11000001.00010000.00010100.00100111)
+Broadcast IP: 193.16.20.39
+In summary, from the subnet "193.16.20.35/29":
+Network IP: 193.16.20.32
+Number of hosts: 6
+Range of IP addresses: 193.16.20.33 to 193.16.20.38
+Broadcast IP: 193.16.20.39
+
+
